@@ -1,13 +1,17 @@
 <!DOCTYPE html>
-<html lang="es">
-    <head>
+<!--[if IEMobile 7 ]> <html lang="es"class="iem7"> <![endif]-->
+<!--[if lt IE 7 ]> <html lang="es" class="ie6 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="es" class="ie7 lt-ie8"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="es" class="ie8"> <![endif]-->
+<!--[if (gte IE 9)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html lang="es"><!--<![endif]-->
+<head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Poncho</title>
+  <title>Plantillas | Poncho</title>
   <meta name="description" content="Base de html y css para la creación de sitios pertenecientes a la Administración Pública Nacional de la República Argentina.">
   <meta name="author" content="Presidencia de la Nación">
-  <link rel="shortcut icon" href="/poncho/favicon.ico">
+  <link rel="shortcut icon" href="/favicon.ico">
 
   <!-- Google Tag Manager -->
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -23,219 +27,181 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="#0072b8">
 
   <meta property="og:site_name" content="Documentación Poncho"/>
-  <meta property="og:url" content="/poncho/">
-  <meta property="og:type" content="article">
-  <meta property="og:title" content="Poncho">
-  <meta property="og:description" content="Base de html y css para la creación de sitios pertenecientes a la Administración Pública Nacional de la República Argentina.">
+  <meta property="og:url" content="http://argob.github.io/poncho/plantillas/login-y-registro/index.html" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Plantillas" />
+  <meta property="og:description" content="Base de html y css para la creación de sitios pertenecientes a la Administración Pública Nacional de la República Argentina." />
   <meta property="og:image" content="http://argob.github.io/poncho/img/poncho_social.jpg" />
-  <meta property="og:locale" content="es_AR">
+  <meta property="og:locale" content="es_AR" />
 
- 
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Poncho">
-  <meta name="twitter:description" content="Base de html y css para la creación de sitios pertenecientes a la Administración Pública Nacional de la República Argentina.">
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Plantillas" />
+  <meta name="twitter:description" content="Base de html y css para la creación de sitios pertenecientes a la Administración Pública Nacional de la República Argentina." />
   <meta name="twitter:image" content="http://argob.github.io/poncho/img/poncho_social.jpg" />
 
-  <link href="/poncho/node_modules/argob-poncho/dist/css/roboto-fontface.css" rel="stylesheet">
-  <link href="/poncho/node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="/poncho/node_modules/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-  <link href="/poncho/node_modules/argob-poncho/dist/css/poncho.min.css" rel="stylesheet">
-  <link href="/poncho/node_modules/argob-poncho/dist/css/documentacion.css" rel="stylesheet">
-  <link href="/poncho/node_modules/argob-poncho/dist/icono-arg.css" rel="stylesheet">
-  <link href="/poncho/css/prism.css" rel="stylesheet">
-  <script src="/poncho/js/jquery.js"></script>
-  <script src="/poncho/js/bootstrap.min.js"></script>
-  <script src="/poncho/js/scripts.js"></script>
+  <link href="../../node_modules/argob-poncho/dist/css/roboto-fontface.css" rel="stylesheet">
+  <link href="../../node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+  <link href="../../node_modules/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="https://id.argentina.gob.ar/static/css/chosen/chosen.css" rel="stylesheet">
+  <link href="../../node_modules/argob-poncho/dist/css/poncho.min.css" rel="stylesheet">
 
-</head>
 
-  <body data-spy="scroll" data-target="#navbar-docs">
-  <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P68ZXT" 
-  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  <!-- End Google Tag Manager (noscript) -->
+  <link href="../../node_modules/argob-poncho/dist/css/documentacion.css" rel="stylesheet">
+  <link href="../../css/prism.css" rel="stylesheet">
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+      <script src="http://poncheado.herokuapp.com/node_modules/html5shiv/html5shiv.js"></script>
+      <script src="http://poncheado.herokuapp.com/node_modules/respond.js/respond.min.js"></script>
+      <![endif]-->  
+
+  </head>
+  
+  <script src="../../node_modules/jquery/dist/jquery.js"></script>
+  <script type="text/javascript" src="../../js/prism.js"></script>
+  <script src="../../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+ 
+  <script src="../../js/scripts.js"></script>
+
+    <style>
+      /* EXPERIMéNTAL */
+      .btn,.btn:hover,.btn-link, .btn-link:hover{border:3px solid transparent;letter-spacing: 1.5px}
+
+      /* PRIMARY */
+      #btn-primary-hover{background-color: #005388!important;}
+
+      .btn-focus{border: 3px solid #FEC221!important;}
+    </style>
+  <body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P68ZXT" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
     <header>
-  <nav class="navbar navbar-top navbar-default">
+
+
+        <nav class="navbar navbar-top navbar-default" role="navigation">
+            <div class="container">
+                <div>
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse"
+                            data-target="#main-navbar-collapse">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a href="/poncho/" class="navbar-brand">
+                            <img alt="Poncho" src="/poncho/img/poncho.gif" height="50">
+                            <h1>Poncho</h1>
+                        </a>
+                    </div>
+                    <div class="collapse navbar-collapse" id="main-navbar-collapse" data-seccion="Plantillas"></div>
+                </div>
+            </div>
+        </nav>
+
+    </header>
+
+<div class="jumbotron bg-primary" style="background-image:url('https://www.argentina.gob.ar/sites/default/files/jumbotron-poncho.png');">
     <div class="container">
-      <div>
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar-collapse">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a href="/poncho/" class="navbar-brand">
-            <img alt="Poncho" src="/poncho/img/poncho.gif" height="50">
-            <h1>Poncho</h1>
-          </a>
-        </div>
-        <div class="collapse navbar-collapse" id="main-navbar-collapse" data-seccion="Inicio"></div>
-      </div>
-    </div>
-  </nav>
-</header>
-
-  <main>
-  <section class="jumbotron bg-primary" style="background-image:url('https://www.argentina.gob.ar/sites/default/files/jumbotron-poncho.png');">
-   
-      <div class="container jumbotron_body">
-        <div class="row">
-          <div class="col-xs-12 col-md-8 col-md-offset-2 text-center">
-            <h1>Poncho</h1>
-            <p>Poncho es la librería de estilos, componentes y patrones de uso para diseñar y desarrollar sitios web del Gobierno de la República Argentina.</p>
-          </div>
-        </div>
-      </div>
-
-    <!-- <div class="overlay"></div> -->
-  </section>
-
-  <section class="p-b-0">
-    <div class="container">
-      <div class="row text-center">
-      <div class="col-sm-12">
-        <h2 class="m-b-3">¿Por qué usar Poncho?</h2>
-      </div>
-        <div class="col-sm-4">
-          <i class="icono-arg-reloj fa-4x text-primary"></i>
-          <h3>Menos tiempo de trabajo</h3>
-          <p>Usá páginas ya desarrolladas. Copiá y pegá componentes sin necesidad de crearlos de cero.</p>
-        </div>
-        <div class="col-sm-4 ">
-          <i class="icono-arg-sitios-accesibles fa-4x text-primary"></i>
-          <h3>Sitios accesibles</h3>
-          <p>Las páginas y componentes cumplen con el nivel AA de accesibilidad de la WCAG.</p>
-        </div>
-        <div class="col-sm-4">
-          <i class="icono-arg-usuarios fa-4x text-primary"></i>
-          <h3>Experiencia unificada</h3>
-          <p>Ayuda a que los ciudadanos reconozcan el sitio como oficial y ya sepan cómo usarlo.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-
-  <section class="p-b-0">
-    <div class="container">
-      <div class="row text-center">
         <div class="col-sm-12">
-          <h2 class="m-b-3">Comenzá a usar Poncho</h2>
+            <ol class="breadcrumb">
+                <li><a href="/poncho/">Inicio</a></li>
+                <li><a href="/poncho/plantillas/paginas-de-argentina/">Plantillas</a></li>
+                <li class="active">Login y Registro</li>
+            </ol>
+
+            <div class="jumbotron_body p-t-2 p-b-2">
+                <h1>Plantillas</h1>
+            </div>
+
+
         </div>
-      </div>
-
-<div class="row panels-row">
-
-  <div class="col-md-3 col-xs-12 col-sm-6">
-     <a href="/poncho/estilos/colores/" class="panel panel-default panel-icon panel-primary">
-        <div class="panel-heading hidden-xs">
-           <i class="icono-arg-paleta-colores"></i>
-        </div>
-        <div class="panel-body">
-           <h3><span class="visible-xs-inline"><i class="icono-arg-paleta-colores"></i>&nbsp; </span>Estilos</h3>
-           <div class="text-muted">
-              <p>Colores, tipografía, íconos y otros lineamientos de identidad visual.</p>
-           </div>
-        </div>
-     </a>
-  </div>
-
-  <div class="col-md-3 col-xs-12 col-sm-6">
-     <a href="/poncho/componentes/botones/" class="panel panel-default panel-icon panel-primary">
-        <div class="panel-heading hidden-xs">
-           <i class="icono-arg-componentes"></i> 
-        </div>
-        <div class="panel-body">
-           <h3><span class="visible-xs-inline"><i class="icono-arg-componentes"></i>&nbsp; </span>Componentes</h3>
-           <div class="text-muted">
-              <p>Botones, tarjetas y otros elementos web para construír páginas.</p>
-           </div>
-        </div>
-     </a>
-  </div>
-
-  <div class="col-md-3 col-xs-12 col-sm-6">
-     <a href="http://argob.github.io/poncho/patrones/formularios/piezas_de_formularios.html" class="panel panel-default panel-icon panel-primary">
-        <div class="panel-heading hidden-xs">
-           <i class="icono-arg-patrones-de-uso"></i>
-        </div>
-        <div class="panel-body">
-           <h3><span class="visible-xs-inline"><i class="icono-arg-patrones-de-uso"></i>&nbsp; </span>Patrones de uso <span aria-label="Versión alpha" class="badge">Alpha</span></h3>
-           <div class="text-muted">
-              <p>Cómo usar los componentes dependiendo de la información a mostrar.</p>
-           </div>
-        </div>
-     </a>
-  </div>
-
-  <div class="col-md-3 col-xs-12 col-sm-6">
-     <a href="https://github.com/argob/poncho" class="panel panel-default panel-icon panel-primary">
-        <div class="panel-heading hidden-xs">
-           <i class="icono-arg-nube-bajar-datos"></i>
-        </div>
-        <div class="panel-body">
-           <h3><span class="visible-xs-inline"><i class="icono-arg-nube-bajar-datos"></i>&nbsp; </span>Poncho en Github</h3>
-           <div class="text-muted">
-              <p>Descargá los archivos y hacé sugerencias para mejorar.</p>
-           </div>
-        </div>
-     </a>
-  </div>
-
-
-  <div class="col-sm-6 col-sm-offset-3 col-xs-12">
-      <div class="alert alert-info">
-        <p>Si necesitás hacer un formulario podés descargar un HTML con los componentes que hay que usar según el dato que se le pide al usuario.</p>
-
-      <br><br>
-      <a href="/poncho/plantillas/formularios/formulario_completo.html" target="_blank" class="btn btn-primary btn-small">Formulario base completo</a>
-      <a href="/poncho/patrones/formularios/piezas_de_formularios.html" target="_blank" class="btn btn-link btn-small">Patrones de uso de formularios</a>
-      </div> 
-  </div>
-
-
-
-
+    </div>
 </div>
+    <main>
+    <div class="container">
+
+        <div class="row">
+            <div class="col-sm-3" id="menuLateral" data-seccion="3"></div>
+
+            <div class="col-sm-9">
+
+                <section>
+                    <article class="row">
+                        <div class="col-sm-12">
+                            <h1>Login y Registro</h1>
+                            <hr>
+                            <h3><a href="login.html">Login</a></h3>
+                            <p> Página inicial que muestra primero la forma de acceder a la plataforma a usuarios que ya
+                                se
+                                registraron, recuperar su contraseña y crear una nueva cuenta.</p>
+                            <h3><a href="registro.html">Registro</a></h3>
+                            <p>Página donde el usuario crea una nueva cuenta con la menor cantidad de datos posibles.
+                            </p>
+                            <h3><a href="correo-bienvenida.html">Correo de bienvenida</a></h3>
+                            <p>Correo electrónico que le confirma al usuario que se creó una nueva cuenta.</p>
+                            <h3><a href="recuperar-contrasena.html">Recuperar contraseña (envío)</a></h3>
+                            <p>Página que pide el correo electrónico del usuario para iniciar el proceso de recuperar
+                                contraseña.
+                            </p>
+                            <h3><a href="recuperar-contrasena-2.html">Recuperar contraseña (envío exitoso)</a></h3>
+                            <p>Página de respuesta de la página anterior (recuperar contraseña).</p>
+                            <h3><a href="correo-recuperar-contrasena.html">Correo de recuperar contraseña</a></h3>
+                            <p>Correo electrónico con el enlace para acceder a la página para finalizar el proceso de
+                                recuperar
+                                contraseña. </p>
+                            <h3><a href="recuperar-contrasena-3.html">Recuperar contraseña (generar nueva)</a></h3>
+                            <p> Página para finalizar el proceso de recuperar contraseña.</p>
+
+
+
+                        </div>
+
+                    </article>
+                </section>
+            </div>
+        </div>
+
     </div>
 
-
-  </section>
-
-
-  <div class="container">
-
-    <section class="" style="padding-bottom: 140px;">
-      <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-      <div class="row text-center">
-      <div class="col-sm-12">
-        <h2 class="m-b-3">Acerca de Poncho</h2>
-      </div>
-      </div>
-
-      <p>Estamos actualizando la nueva versión de Poncho para cubrir todos los componentes y patrones de uso de todos los sitios web del Gobierno.</p>
-      <p>Contactate con nosotros a proccella@modernizacion.gob.ar si tenés alguna duda o necesitás componentes nuevos.</p>
-
-      <p>Poncho es administrado por la Dirección Nacional de Servicios Digitales de la Subsecretaría de Gobierno Digital, dependiente de la Secretaría de Ejemplo de la República Argentina.</p>
-
-      <p>Si necesitás también podés consultar la <a href="/poncho/2015">documentación anterior</a> que próximamente vamos a dar de baja cuando estén actualizados todos los componentes en esta nueva documentación.</p>
-        </div>
-      </div>
-    </section>
-  </div>
-
-
+        
     </main>
-    
-    <script>
-      $(function () {
-        $('[data-toggle="tooltip"]').tooltip();
-        $('[data-toggle="popover"]').popover();
-      })
-    </script>
+    <footer class="main-footer hidden">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    <img class="image-responsive" alt="Argentina.gob.ar - Presidencia de la Nación" src="#">
+                    <p class="text-muted small">Los contenidos de Argentina.gob.ar están licenciados bajo <a href="https://creativecommons.org/licenses/by/2.5/ar/">Creative Commons Reconocimiento 2.5 Argentina License</a></p>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <ul>
+                        <li><a href="/servicios">Trámites y servicios</a></li>
+                        <li><a href="/organismos">Organismos del Estado</a></li>
+                        <li><a href="/pais">Nuestro país</a></li>
+                        <li><a href="http://mapadelestado.modernizacion.gob.ar/">Mapa del Estado</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <ul>
+                        <li><a href="/ayuda">Ayuda</a></li>
+                        <li><a href="/sugerencias">Hacer una sugerencia</a></li>
+                        <li><a href="/acerca">Acerca de este sitio</a></li>
+                        <li><a href="/terminos-y-condiciones">Términos y condiciones</a></li>
+                        <li><a href="/creditos">Créditos</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
 
-  </body>
+    <script>
+    $(function(){
+        $("#menuLateral").load("../../includes/plantillas_menu.html",function(){
+        var seccion = $("#menuLateral").data("seccion");
+        $("#menuLateral ul li a[data-seccion="+seccion+"]").parent().addClass("active");
+        });
+    });
+    </script>
+</body>
 </html>
