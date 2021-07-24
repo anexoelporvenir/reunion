@@ -26,7 +26,7 @@
   <meta name="msapplication-navbutton-color" content="#0072b8">
   <meta name="apple-mobile-web-app-status-bar-style" content="#0072b8">
   <meta property="og:site_name" content="Documentación Poncho"/>
-  <meta property="og:url" content="http://localhost:4000/proyectos/documentacion/formularios/ejemplo_completo.html" />
+  <meta property="og:url" content="http://argob.github.io/poncho/plantillas/ejemplo_completo.html" />
   <meta property="og:type" content="article" />
   <meta property="og:title" content="Formularios - Ejemplo completo" />
   <meta property="og:description" content="Base de html y css para la creación de sitios pertenecientes a la Administración Pública Nacional de la República Argentina." />
@@ -141,7 +141,7 @@
  </div>
 
 
-<form>
+<form autocomplete="off">
 
  <h2 class="m-t-2">Título de paso del formulario</h2>
  
@@ -154,11 +154,14 @@
 
     <div class="row">
     <div class="col-md-4 form-group item-form">
-    <label for="cuil">CUIL</label>
-    <p class="help-block">Sin guiones ni barras</p>
-    <p class="help-block"><a href="https://www.anses.gob.ar/constancia-de-cuil/" aria-label="Ingresá tu CUIL. Si no lo sabés consultá en este enlace de ANSES" target="_blank">Consultá tu CUIL</a></p>
-        <input type="number" class="form-control" id="cuil" required aria-required="true">
-        <p class="help-block error hidden">Ingresá tu CUIL <br>El CUIL tiene un formato no válido</p>
+      <label for="cuil">CUIL</label>
+      <p class="help-block">Sin guiones ni barras</p>
+      <p class="help-block"><a href="https://www.anses.gob.ar/constancia-de-cuil/"
+          aria-label="Ingresá tu CUIL. Si no lo sabés consultá en este enlace de ANSES" target="_blank">Consultá tu
+          CUIL</a></p>
+      <input type="number" class="form-control" id="cuil" required aria-required="true" aria-invalid="false" title="Ingresa tu CUIL">
+      <p class="help-block error hidden" role="alert">Ingresá tu CUIL <br>El CUIL tiene un formato no
+        válido</p>
     </div>
   </div>
 
@@ -167,7 +170,7 @@
     <div class="col-md-8 form-group item-form">
       <label for="nombre">Nombres</label>
       <input type="text" name="name" class="form-control" id="nombre" required aria-required="true">
-      <p class="help-block error hidden">Ingresá tu nombre</p>
+      <p class="help-block error hidden" role="alert">Ingresá tu nombre</p>
     </div>
   </div>
 
@@ -205,7 +208,7 @@
       <input type="radio" name="sexo" id="m" value="M" required aria-required="true">
       Masculino
     </label>
-    <p class="help-block error hidden">Ingresá tu sexo</p>
+    <p class="help-block error hidden p-y-1">Ingresá tu sexo</p>
 </div>
 
 </fieldset>
@@ -234,15 +237,7 @@
 </div>
 
 
-<div class="row">
- <div class="col-md-8">
-  <label for="password_confirmacion">Contraseña</label>
-  <div class="form-group item-form">
-   <input id="password_confirmacion" name="password_confirmacion" type="password" class="form-control" maxlength="15">
-   <p class="help-block error hidden">La contraseña ingresada no es correcta</p>
- </div>
-</div>
-</div>    
+   
 
 
 <div class="row">
@@ -969,7 +964,7 @@
         <option value="">Municipio 1</option>
         <option value="">Municipio 2</option>
         <option value="">Municipio 3</option>
-        <option value="Prueba">Prueba</option>
+        <option class="hidden" value="Prueba">Prueba</option>
       </select>
       <p class="help-block error hidden">Ingresá un Municipio</p>
     </div>
@@ -1341,6 +1336,35 @@ function pophidde(){
     */
   });
 </script>
+<script>
+// Check cuil probando accesibilidad errores
+var node = document.getElementById("cuil");
+  //cuando pierda el foco no este vacio ni tenga caracter guion (-)
+  node.addEventListener('focusout', () => {
+    
+    if(node.value < 0 || node.value == "" || node.indexOf('-') != -1){
+      
+      node.setAttribute('aria-invalid', 'true');
+      node.parentElement.classList.add("has-error");
+      node.parentElement.classList.add("has-feedback");
+      node.nextElementSibling.classList.remove("hidden");
+      
+    }
 
+
+  });
+  // cada vez que cambie dentro del campo y sea distinto de vacio
+  node.addEventListener('change', (event) => {
+    
+      if(node.value !== ""){
+        node.setAttribute('aria-invalid', 'false');
+        node.parentElement.classList.remove("has-error");
+        node.parentElement.classList.remove("has-feedback");
+        node.nextElementSibling.classList.add("hidden");
+        node.focus();
+      }
+      
+    });
+</script>
 </body>
 </html>
